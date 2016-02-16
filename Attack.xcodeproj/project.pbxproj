@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E72D99961C712DAF00786B86 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D99951C712DAF00786B86 /* Character.swift */; };
+		E72D99971C712DAF00786B86 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D99951C712DAF00786B86 /* Character.swift */; };
+		E72D99981C712DAF00786B86 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D99951C712DAF00786B86 /* Character.swift */; };
 		E7BD24A61C6FDB8D00252D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD24A51C6FDB8D00252D27 /* AppDelegate.swift */; };
 		E7BD24A81C6FDB8D00252D27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD24A71C6FDB8D00252D27 /* ViewController.swift */; };
 		E7BD24AB1C6FDB8D00252D27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BD24A91C6FDB8D00252D27 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 		E7BD24B31C6FDB8D00252D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BD24B11C6FDB8D00252D27 /* LaunchScreen.storyboard */; };
 		E7BD24BE1C6FDB8D00252D27 /* AttackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD24BD1C6FDB8D00252D27 /* AttackTests.swift */; };
 		E7BD24C91C6FDB8D00252D27 /* AttackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BD24C81C6FDB8D00252D27 /* AttackUITests.swift */; };
+		E7E4880D1C723F9A006BEB53 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4880C1C723F9A006BEB53 /* GameController.swift */; };
+		E7E4880E1C723F9A006BEB53 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4880C1C723F9A006BEB53 /* GameController.swift */; };
+		E7E4880F1C723F9A006BEB53 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4880C1C723F9A006BEB53 /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E72D99951C712DAF00786B86 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		E7BD24A21C6FDB8D00252D27 /* Attack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BD24A51C6FDB8D00252D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7BD24A71C6FDB8D00252D27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +56,7 @@
 		E7BD24C41C6FDB8D00252D27 /* AttackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BD24C81C6FDB8D00252D27 /* AttackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttackUITests.swift; sourceTree = "<group>"; };
 		E7BD24CA1C6FDB8D00252D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7E4880C1C723F9A006BEB53 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,8 @@
 				E7BD24B11C6FDB8D00252D27 /* LaunchScreen.storyboard */,
 				E7BD24B41C6FDB8D00252D27 /* Info.plist */,
 				E7BD24AC1C6FDB8D00252D27 /* Attack.xcdatamodeld */,
+				E72D99951C712DAF00786B86 /* Character.swift */,
+				E7E4880C1C723F9A006BEB53 /* GameController.swift */,
 			);
 			path = Attack;
 			sourceTree = "<group>";
@@ -260,8 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7BD24AE1C6FDB8D00252D27 /* Attack.xcdatamodeld in Sources */,
+				E7E4880D1C723F9A006BEB53 /* GameController.swift in Sources */,
 				E7BD24A81C6FDB8D00252D27 /* ViewController.swift in Sources */,
 				E7BD24A61C6FDB8D00252D27 /* AppDelegate.swift in Sources */,
+				E72D99961C712DAF00786B86 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7BD24BE1C6FDB8D00252D27 /* AttackTests.swift in Sources */,
+				E7E4880E1C723F9A006BEB53 /* GameController.swift in Sources */,
+				E72D99971C712DAF00786B86 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7BD24C91C6FDB8D00252D27 /* AttackUITests.swift in Sources */,
+				E7E4880F1C723F9A006BEB53 /* GameController.swift in Sources */,
+				E72D99981C712DAF00786B86 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +502,7 @@
 				E7BD24CF1C6FDB8D00252D27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7BD24D01C6FDB8D00252D27 /* Build configuration list for PBXNativeTarget "AttackTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +511,7 @@
 				E7BD24D21C6FDB8D00252D27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7BD24D31C6FDB8D00252D27 /* Build configuration list for PBXNativeTarget "AttackUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +520,7 @@
 				E7BD24D51C6FDB8D00252D27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
