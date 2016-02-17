@@ -23,15 +23,17 @@ class GameController
     private var pAp:Int! = 0;
     
     init () {
-        var pHp:Int = self.generateRandomness(40, randomness: 5)
-        var pAp:Int = self.generateRandomness(10, randomness: 2)
-        
-        player1 = Character(hp: pHp, attackPwr: pAp, charName: "Grumble");
-        
-        pHp = self.generateRandomness(50, randomness: 6)
-        pAp = self.generateRandomness(15, randomness: 3)
-        
-        player2 = Character(hp: pHp, attackPwr: pAp, charName: "Sparky");
+        player1 = Character(baseHp: 40, hpOffset: 10, baseAttackPwr: 10, apOffset: 2,  charName: "Grumble");
+        player2 = Character(baseHp: 50, hpOffset: 6, baseAttackPwr: 15, apOffset: 3,  charName: "Sparky");
+    }
+    
+    func regenerate(player: Players) {
+        switch player {
+            case Players.Player1:
+                player1.regenerate();
+            case Players.Player2:
+                player2.regenerate();
+        }
     }
     
     func playerInfo() -> String {
@@ -47,7 +49,7 @@ class GameController
         switch attack {
             case Players.Player1:
                 player1.hp -= player2.attackPwr;
-                if (isAlive(player1)) {
+                if (isAlive(Players.Player1)) {
                     infoMsg = "\(player1.playerName) takes \(player2.attackPwr) HP of damage - \(player1.hp) left";
                 } else {
                     infoMsg = "\(player1.playerName) is DEAD!"
@@ -55,7 +57,7 @@ class GameController
             
             case Players.Player2:
                 player2.hp -= player1.attackPwr;
-                if (isAlive(player2)) {
+                if (isAlive(Players.Player2)) {
                     infoMsg = "\(player2.playerName) takes \(player1.attackPwr) HP of damage - \(player2.hp) left";
                 } else {
                     infoMsg = "\(player2.playerName) is DEAD!"
@@ -65,41 +67,21 @@ class GameController
         return infoMsg;
     }
     
-    private func generateRandomness(startingValue:Int, randomness:UInt32) -> Int {
-        
-        var retVal:Int = startingValue;
-        let randVal:Int = random(randomness)
-        
-        if (randVal > Int(randomness/2)) {
-            retVal -= randVal;
-        } else {
-            retVal += randVal;
-        }
-        
-        return retVal;
-    }
-
-    private func random(upperValue: UInt32) ->Int {
-        let rand:Int = Int(arc4random_uniform(upperValue))
-        
-        return rand
-    }
-
-    func isAlive(player: Character) -> Bool {
+    func isAlive(player: Players) -> Bool {
         var retVal: Bool = true;
-        
-        if (player.hp <= 0) {
-            retVal = false;
+
+        switch player {
+            case Players.Player1:
+                if (player1.hp <= 0) {
+                    retVal = false;
+                }
+            
+            case Players.Player2:
+                if (player2.hp <= 0) {
+                    retVal = false;
+                }
         }
         
         return retVal;
     }
-    
-    func generateNewCharacter(player: Players)
-    {
-        NSTimer.scheduledTimerWithTimeInterval(2.0, target: self,
-            selector: "generateNewCharacter", userInfo: nil, repeats: false)
-    }
-    
-
 }

@@ -138,7 +138,9 @@
                     <connections>
                         <outlet property="gameMsg" destination="JcF-IV-DfG" id="EBj-Sj-eHd"/>
                         <outlet property="p1AttackBtn" destination="hTg-um-pw8" id="jVz-AH-ar7"/>
+                        <outlet property="p1Img" destination="nop-Nk-1gN" id="3lB-KP-4gr"/>
                         <outlet property="p2AttackBtn" destination="VE0-tR-WAz" id="snv-WL-2xC"/>
+                        <outlet property="p2Img" destination="smL-YT-CWa" id="gfw-DU-VOG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
